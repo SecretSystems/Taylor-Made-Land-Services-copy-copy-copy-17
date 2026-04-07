@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Taylor Made Land Services, LLC provides professional dirt work, land clearing, demolition, fencing, vinyl skirting, tree removal, shredding, and statewide land services from Lafayette, Louisiana.">
+  <title>Taylor Made Land Services | Lafayette, LA Land Services</title>
+  <style>
+    :root{
+      --bg:#081116;
+      --bg2:#0e171d;
+      --card:#101c23;
+      --card2:#13212a;
+      --text:#eef4f7;
+      --muted:#aec0ca;
+      --line:rgba(255,255,255,.09);
+      --accent:#d7b56d;
+      --accent2:#79a9b8;
+      --shadow:0 22px 60px rgba(0,0,0,.35);
+      --shadow2:0 12px 28px rgba(0,0,0,.24);
+      --radius:24px;
+      --radius2:18px;
+      --max:1160px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(215,181,109,.14), transparent 24%),
+        radial-gradient(circle at top right, rgba(121,169,184,.10), transparent 28%),
+        linear-gradient(180deg, #050b0f 0%, var(--bg) 22%, #071015 100%);
+      line-height:1.5;
+      overflow-x:hidden;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max), calc(100% - 40px)); margin:0 auto}
+    .nav{
+      position:sticky; top:0; z-index:1000;
+      backdrop-filter:saturate(130%) blur(16px);
+      background:rgba(6,10,13,.72);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner{
+      height:84px;
+      display:flex; align-items:center; justify-content:space-between; gap:20px;
+    }
+    .brand{display:flex; align-items:center; gap:14px; min-width:0}
+    .brand-mark{
+      width:52px; height:52px; border-radius:16px; overflow:hidden;
+      background:linear-gradient(135deg, rgba(215,181,109,.2), rgba(121,169,184,.15));
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:var(--shadow2);
+      flex:0 0 auto;
+    }
+    .brand-mark img{width:100%;height:100%;object-fit:cover}
+    .brand-text{min-width:0}
+    .brand-text strong{display:block; font-size:1rem; letter-spacing:.02em}
+    .brand-text span{display:block; color:var(--muted); font-size:.86rem}
+    .nav-links{display:flex; align-items:center; gap:26px; color:var(--muted); font-size:.95rem}
+    .nav-links a{transition:.2s ease}
+    .nav-links a:hover{color:var(--text)}
+    .nav-cta{
+      padding:13px 18px; border-radius:999px;
+      background:linear-gradient(135deg, var(--accent), #f2d38d);
+      color:#1a1b1a; font-weight:700;
+      box-shadow:0 14px 30px rgba(215,181,109,.22);
+      transition:transform .2s ease, box-shadow .2s ease, filter .2s ease;
+      white-space:nowrap;
+    }
+    .nav-cta:hover{transform:translateY(-1px); box-shadow:0 18px 34px rgba(215,181,109,.28); filter:saturate(105%)}
+    .hero{
+      position:relative;
+      min-height:calc(100vh - 84px);
+      display:flex;
+      align-items:center;
+      padding:72px 0 64px;
+      overflow:hidden;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(90deg, rgba(5,10,14,.88) 0%, rgba(5,10,14,.72) 45%, rgba(5,10,14,.45) 100%),
+        radial-gradient(circle at 20% 20%, rgba(215,181,109,.10), transparent 24%);
+      z-index:1;
+    }
+    .hero-bg{
+      position:absolute; inset:0;
+      background:
+        url("images/cover.jpg") center/cover no-repeat,
+        linear-gradient(135deg, #12212a, #071015);
+      transform:scale(1.03);
+      filter:saturate(1.02) contrast(1.02);
+    }
+    .hero-grid{
+      position:relative; z-index:2;
+      width:min(var(--max), calc(100% - 40px));
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:40px;
+      align-items:center;
+    }
+    .eyebrow{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:999px;
+      color:#f4efe5;
+      font-size:.92rem;
+      letter-spacing:.02em;
+      margin-bottom:22px;
+      box-shadow:var(--shadow2);
+    }
+    .eyebrow-dot{
+      width:9px; height:9px; border-radius:50%;
+      background:linear-gradient(135deg, var(--accent), #f0d28c);
+      box-shadow:0 0 0 6px rgba(215,181,109,.12);
+    }
+    h1{
+      margin:0;
+      font-size:clamp(2.65rem, 6vw, 5.5rem);
+      line-height:1.02;
+      letter-spacing:-.04em;
+      max-width:12ch;
+    }
+    .lead{
+      margin:22px 0 30px;
+      font-size:1.12rem;
+      color:#d1dde3;
+      max-width:55ch;
+    }
+    .hero-actions{display:flex; flex-wrap:wrap; gap:14px; align-items:center}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:15px 22px;
+      border-radius:999px;
+      font-weight:700;
+      transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+      border:1px solid transparent;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg, var(--accent), #edd08b);
+      color:#161817;
+      box-shadow:0 18px 36px rgba(215,181,109,.22);
+    }
+    .btn-outline{
+      background:rgba(255,255,255,.05);
+      border-color:rgba(255,255,255,.14);
+      color:var(--text);
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-outline:hover{background:rgba(255,255,255,.08)}
+    .hero-panel{
+      justify-self:end;
+      width:min(100%, 480px);
+      background:linear-gradient(180deg, rgba(17,24,30,.88), rgba(10,16,20,.84));
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-panel::before{
+      content:"";
+      position:absolute; inset:auto -20% -35% auto;
+      width:280px; height:280px; border-radius:50%;
+      background:radial-gradient(circle, rgba(215,181,109,.18), transparent 68%);
+      pointer-events:none;
+    }
+    .hero-panel-top{
+      display:flex; gap:14px; align-items:center; margin-bottom:16px;
+      padding-bottom:16px; border-bottom:1px solid rgba(255,255,255,.09);
+    }
+    .hero-badge{
+      width:56px; height:56px; border-radius:18px; overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      flex:0 0 auto;
+      background:linear-gradient(135deg, rgba(215,181,109,.16), rgba(121,169,184,.16));
+    }
+    .hero-badge img{width:100%;height:100%;object-fit:cover}
+    .hero-panel h2{margin:0; font-size:1.1rem}
+    .hero-panel p{margin:4px 0 0; color:var(--muted); font-size:.95rem}
+    .hero-stat-grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:12px;
+    }
+    .stat{
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:20px;
+      padding:18px;
+      min-height:110px;
+    }
+    .stat strong{display:block; font-size:1.72rem; letter-spacing:-.04em; margin-bottom:6px; color:#fff}
+    .stat span{color:var(--muted); font-size:.92rem}
+    section{padding:92px 0}
+    .section-head{
+      display:flex; align-items:end; justify-content:space-between; gap:22px;
+      margin-bottom:30px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size:clamp(2rem, 4vw, 3rem);
+      letter-spacing:-.03em;
+      line-height:1.05;
+    }
+    .section-head p{
+      margin:0;
+      max-width:56ch;
+      color:var(--muted);
+    }
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:26px;
+      padding:26px;
+      box-shadow:var(--shadow2);
+      transition:transform .25s ease, border-color .25s ease, background .25s ease;
+      min-height:240px;
+    }
+    .card:hover{transform:translateY(-5px); border-color:rgba(215,181,109,.22); background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04))}
+    .icon{
+      width:54px; height:54px; border-radius:18px;
+      display:grid; place-items:center;
+      background:linear-gradient(135deg, rgba(215,181,109,.18), rgba(121,169,184,.12));
+      border:1px solid rgba(255,255,255,.09);
+      margin-bottom:18px;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.07);
+      font-size:1.35rem;
+    }
+    .card h3{margin:0 0 10px; font-size:1.25rem}
+    .card p{margin:0; color:var(--muted)}
+    .about{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:24px;
+      align-items:center;
+    }
+    .media{
+      position:relative;
+      border-radius:30px;
+      overflow:hidden;
+      min-height:520px;
+      background:linear-gradient(135deg, rgba(215,181,109,.12), rgba(121,169,184,.08));
+      border:1px solid rgba(255,255,255,.09);
+      box-shadow:var(--shadow);
+    }
+    .media img{
+      width:100%; height:100%; object-fit:cover;
+      opacity:.93;
+    }
+    .media::after{
+      content:"";
+      position:absolute; inset:0;
+      background:linear-gradient(180deg, rgba(8,17,22,.08), rgba(8,17,22,.74));
+    }
+    .media-card{
+      position:absolute;
+      left:18px; right:18px; bottom:18px;
+      z-index:2;
+      background:rgba(10,15,19,.72);
+      border:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(12px);
+      border-radius:22px;
+      padding:18px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+    .media-card .mini{
+      width:54px; height:54px; border-radius:16px; overflow:hidden; flex:0 0 auto;
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .media-card .mini img{width:100%;height:100%;object-fit:cover}
+    .media-card strong{display:block; margin-bottom:2px}
+    .media-card span{display:block; color:var(--muted); font-size:.92rem}
+    .copy p{color:var(--muted); margin:0 0 16px; font-size:1.02rem}
+    .bullets{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:14px;
+      margin-top:24px;
+    }
+    .bullet{
+      padding:16px 16px 16px 18px;
+      border-radius:18px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      color:#e8edf0;
+    }
+    .why{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:16px;
+    }
+    .why-item{
+      padding:22px;
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow2);
+    }
+    .why-item strong{display:block; margin:12px 0 8px; font-size:1.04rem}
+    .why-item p{margin:0; color:var(--muted); font-size:.95rem}
+    .why-ico{
+      width:48px; height:48px; border-radius:16px;
+      display:grid; place-items:center;
+      background:linear-gradient(135deg, rgba(215,181,109,.18), rgba(121,169,184,.12));
+      border:1px solid rgba(255,255,255,.08);
+      font-size:1.1rem;
+    }
+    .cta{
+      padding:0 0 92px;
+    }
+    .cta-box{
+      position:relative;
+      border-radius:34px;
+      overflow:hidden;
+      background:
+        linear-gradient(135deg, rgba(215,181,109,.18), rgba(121,169,184,.12)),
+        linear-gradient(180deg, rgba(16,28,35,.96), rgba(8,17,22,.96));
+      border:1px solid rgba(255,255,255,.09);
+      box-shadow:var(--shadow);
+      padding:40px;
+      display:flex;
+      justify-content:space-between;
+      gap:28px;
+      align-items:center;
+    }
+    .cta-box h2{margin:0 0 12px; font-size:clamp(1.8rem, 3vw, 2.6rem); line-height:1.08}
+    .cta-box p{margin:0; color:#dde6ea; max-width:60ch}
+    .cta-actions{display:flex; flex-wrap:wrap; gap:14px; justify-content:flex-end}
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .contact-panel,
+    .form-panel{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:28px;
+      box-shadow:var(--shadow2);
+      padding:28px;
+    }
+    .contact-list{
+      display:grid;
+      gap:14px;
+      margin-top:18px;
+    }
+    .contact-item{
+      display:flex; gap:14px; align-items:flex-start;
+      padding:16px;
+      border-radius:20px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.07);
+    }
+    .contact-item .icon{width:46px;height:46px;border-radius:15px;margin:0;font-size:1rem}
+    .contact-item strong{display:block; margin-bottom:4px}
+    .contact-item span, .contact-item a{color:var(--muted)}
+    .form-panel{
+      display:flex; flex-direction:column; justify-content:space-between;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03)),
+        url("images/feature.jpg") center/cover no-repeat;
+      position:relative;
+      min-height:100%;
+    }
+    .form-panel::before{
+      content:"";
+      position:absolute; inset:0;
+      background:linear-gradient(180deg, rgba(8,17,22,.44), rgba(8,17,22,.78));
+      border-radius:28px;
+    }
+    .form-content{position:relative; z-index:1}
+    .form-content h3{margin:0 0 12px; font-size:1.5rem}
+    .form-content p{margin:0 0 18px; color:#dae4e9; max-width:44ch}
+    .form-cta{
+      position:relative; z-index:1;
+      display:grid; gap:12px;
+      margin-top:auto;
+    }
+    .form-cta .btn{width:fit-content}
+    .mini-note{
+      color:#d9e1e5; font-size:.92rem; opacity:.95;
+    }
+    footer{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding:26px 0;
+      background:rgba(4,8,11,.72);
+    }
+    .footer-inner{
+      display:flex; align-items:center; justify-content:space-between; gap:20px;
+      color:var(--muted); font-size:.94rem;
+    }
+    .footer-brand{display:flex; align-items:center; gap:12px}
+    .footer-brand .brand-mark{width:44px;height:44px;border-radius:14px}
+    .footer-brand strong{display:block; color:var(--text)}
+    .footer-brand span{display:block; font-size:.85rem}
+    .mobile-toggle{display:none}
+    @media (max-width: 980px){
+      .hero-grid,.about,.contact-grid,.section-head,.cta-box,.footer-inner{grid-template-columns:1fr; display:grid}
+      .cards,.why{grid-template-columns:1fr 1fr}
+      .nav-links{display:none}
+      .mobile-toggle{display:inline-flex}
+      .hero{padding-top:54px}
+      .hero-panel{justify-self:start}
+      .cta-actions{justify-content:flex-start}
+      .cta-box{padding:32px}
+    }
+    @media (max-width: 680px){
+      .wrap{width:min(var(--max), calc(100% - 28px))}
+      .nav-inner{height:74px}
+      .brand-text span{display:none}
+      h1{max-width:100%}
+      .cards,.why,.bullets{grid-template-columns:1fr}
+      section{padding:72px 0}
+      .hero{min-height:auto; padding:62px 0}
+      .lead{font-size:1.03rem}
+      .hero-stat-grid{grid-template-columns:1fr}
+      .media{min-height:420px}
+      .cta-box{padding:24px; border-radius:28px}
+      .contact-panel,.form-panel{padding:22px; border-radius:24px}
+      .footer-inner{justify-items:start}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Taylor Made Land Services home">
+        <span class="brand-mark">
+          <img src="images/profile.jpg" alt="Taylor Made Land Services brand mark" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, rgba(215,181,109,.25), rgba(121,169,184,.18))'">
+        </span>
+        <span class="brand-text">
+          <strong>Taylor Made Land Services</strong>
+          <span>Lafayette, Louisiana</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#why">Why Choose Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="tel:3374120495">Call (337) 412-0495</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Fully insured land services across South Louisiana</div>
+          <h1>Precision land work for properties that need to be done right.</h1>
+          <p class="lead">Taylor Made Land Services, LLC delivers dependable dirt work, land clearing, demolition, fencing, vinyl skirting, tree removal, shredding, and more for clients in Lafayette and statewide throughout Louisiana.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:3374120495">Request a Quote</a>
+            <a class="btn btn-outline" href="mailto:hello@secretsystems.com">Email the Team</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Business highlights">
+          <div class="hero-panel-top">
+            <span class="hero-badge">
+              <img src="images/profile.jpg" alt="Taylor Made Land Services logo" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, rgba(215,181,109,.25), rgba(121,169,184,.18))'">
+            </span>
+            <div>
+              <h2>Taylor Made Land Services, LLC</h2>
+              <p>South Louisiana expertise with statewide reach</p>
+            </div>
+          </div>
+          <div class="hero-stat-grid">
+            <div class="stat">
+              <strong>Insured</strong>
+              <span>Professional coverage for peace of mind on every job.</span>
+            </div>
+            <div class="stat">
+              <strong>Statewide</strong>
+              <span>Based near Acadiana and ready to travel where work is needed.</span>
+            </div>
+            <div class="stat">
+              <strong>Versatile</strong>
+              <span>From site prep to cleanup, fencing, and removals.</span>
+            </div>
+            <div class="stat">
+              <strong>Reliable</strong>
+              <span>Clear communication and practical solutions from start to finish.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Core services built for real property needs</h2>
+          </div>
+          <p>Whether the project calls for clearing space, repairing ground, removing structures, or preparing a lot for the next phase, the work is handled with care and an efficient, professional approach.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="icon">⛏️</div>
+            <h3>Dirt Work &amp; Site Preparation</h3>
+            <p>Grading, leveling, and practical dirt work solutions that help properties drain, perform, and look finished the right way.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🌲</div>
+            <h3>Land Clearing &amp; Tree Removal</h3>
+            <p>Clear overgrowth, remove trees, and reclaim usable space with efficient service that prepares the land for what comes next.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🏗️</div>
+            <h3>Demolition, Fencing &amp; Skirting</h3>
+            <p>From clean demolition to fencing and vinyl skirting, Taylor Made Land Services helps improve, secure, and finish properties with precision.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about">
+        <div class="media">
+          <img src="images/supporting.jpg" alt="Taylor Made Land Services supporting project image" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, rgba(215,181,109,.14), rgba(121,169,184,.10)), linear-gradient(180deg, #1b2a33, #081116)'">
+          <div class="media-card">
+            <div class="mini">
+              <img src="images/profile.jpg" alt="Taylor Made Land Services profile image" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, rgba(215,181,109,.25), rgba(121,169,184,.18))'">
+            </div>
+            <div>
+              <strong>Based near the Acadiana area</strong>
+              <span>Serving Lafayette, South Louisiana, and statewide projects.</span>
+            </div>
+          </div>
+        </div>
+        <div class="copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> About Taylor Made Land Services</div>
+          <h2 style="margin:0 0 18px; font-size:clamp(2rem, 4vw, 3rem); line-height:1.06; letter-spacing:-.03em;">A serious land services company for clients who expect dependable work.</h2>
+          <p>Taylor Made Land Services, LLC is located in South Louisiana near the Acadiana area, and we proudly serve Lafayette and statewide projects with the same standard of care. We are fully insured and equipped for a wide range of exterior and land improvement services, including dirt work, land clearing, demolition, fencing, vinyl skirting, tree removal, shredding, and related property preparation needs.</p>
+          <p>Our work is built around efficiency, clear communication, and a clean finish. Whether the job is a simple removal or a more involved site project, we approach each property with practical planning and a professional mindset.</p>
+          <div class="bullets">
+            <div class="bullet">Designed to handle both small residential needs and larger property projects</div>
+            <div class="bullet">Professional service without unnecessary delays or runaround</div>
+            <div class="bullet">Fully insured for confidence on every job site</div>
+            <div class="bullet">Statewide availability with local roots in Lafayette</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Why property owners choose Taylor Made Land Services</h2>
+          </div>
+          <p>The difference is in the details: careful execution, responsive communication, and dependable results that make the next step easier.</p>
+        </div>
+        <div class="why">
+          <div class="why-item">
+            <div class="why-ico">✓</div>
+            <strong>Fully insured</strong>
+            <p>Work is handled with professionalism and the right coverage for added peace of mind.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-ico">⟡</div>
+            <strong>High standards</strong>
+            <p>From clearing to cleanup, the job is done with attention to finish and function.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-ico">↗</div>
+            <strong>Statewide service</strong>
+            <p>Based near Lafayette, with the flexibility to take on projects across Louisiana.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-ico">⚒</div>
+            <strong>Versatile capabilities</strong>
+            <p>One team for dirt work, demolition, fencing, skirting, and land improvement needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <div class="cta-box">
+          <div>
+            <h2>Ready to get the property handled the right way?</h2>
+            <p>Speak with Taylor Made Land Services about your dirt work, clearing, demolition, fencing, or removal project. We’ll help you move forward with clear next steps and a professional plan.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="tel:3374120495">Call Now</a>
+            <a class="btn btn-outline" href="mailto:hello@secretsystems.com">Send an Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Contact information</h2>
+          </div>
+          <p>Reach out to discuss your project, request a quote, or ask about statewide availability.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-panel">
+            <h3 style="margin:0 0 12px; font-size:1.55rem;">Taylor Made Land Services, LLC</h3>
+            <p style="margin:0; color:var(--muted); max-width:50ch;">Located in South Louisiana near the Acadiana area, serving homeowners, property owners, and businesses in Lafayette and beyond.</p>
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="icon">☎</div>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:3374120495">(337) 412-0495</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon">✉</div>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:hello@secretsystems.com">hello@secretsystems.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon">📍</div>
+                <div>
+                  <strong>Service Area</strong>
+                  <span>Lafayette, South Louisiana, and statewide work in Louisiana</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-panel">
+            <div class="form-content">
+              <div class="eyebrow" style="background:rgba(255,255,255,.08)"><span class="eyebrow-dot"></span> Fast response for serious project inquiries</div>
+              <h3>Get in touch for availability and a clear quote.</h3>
+              <p>Share the basics of your project and the team will follow up to discuss scope, timing, and the best path forward.</p>
+            </div>
+            <div class="form-cta">
+              <a class="btn btn-primary" href="tel:3374120495">Call (337) 412-0495</a>
+              <a class="btn btn-outline" href="mailto:hello@secretsystems.com">Email hello@secretsystems.com</a>
+              <div class="mini-note">Professional land services for projects that need dependable execution and a polished finish.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="footer-brand" href="#top">
+        <span class="brand-mark">
+          <img src="images/profile.jpg" alt="Taylor Made Land Services logo" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, rgba(215,181,109,.25), rgba(121,169,184,.18))'">
+        </span>
+        <span>
+          <strong>Taylor Made Land Services</strong>
+          <span>Lafayette, Louisiana</span>
+        </span>
+      </a>
+      <div>Fully insured land services across South Louisiana and statewide Louisiana projects.</div>
+      <div>© 2026 Taylor Made Land Services, LLC</div>
+    </div>
+  </footer>
+</body>
+</html>
